@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.jpg">
+    <title>NBA 2K22 Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/2k logo.png"></a>
+        <div class="toggle"><img src="img/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Anyone... <span>Anywhere.</span></h2>
+            <p>NBA 2K22 available in Current-Gen and New-Gen on multiple gaming platforms.</p>
+            <a href="#" class="play"><img src="img/play.png" onclick="toggle();">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="img/facebook.png"></a></li>
+                <li><a href="#"><img src="img/twitter.png"></a></li>
+                <li><a href="#"><img src="img/instagram.png"></a></li>
+            </ul>    
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="Gameplay Trailer.mp4" controls="true"></video>
+        <img src="img/close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
